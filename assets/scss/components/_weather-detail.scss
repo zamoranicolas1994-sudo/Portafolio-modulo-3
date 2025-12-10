@@ -13,7 +13,7 @@
   }
 
   &__main {
-    text-align: left;
+    text-align: center;
     margin-bottom: $space-lg;
 
     & .weather-detail__temp {
@@ -37,6 +37,7 @@
     border-radius: $radius;
     text-align: center;
     box-shadow: $shadow;
+    
 
     h6 {
       margin-bottom: $space-sm;
@@ -49,3 +50,38 @@
     }
   }
 }
+
+
+.weather-detail {
+    
+     &__info-box {
+    background-color: rgba(255, 255, 255, 0.85);// reemplaza $color-card
+    padding: $space-lg;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    text-align: center;
+    margin-bottom: $space-lg;
+  }
+
+  &__city {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: $space-md;
+  }
+
+  &__main {
+    margin-bottom: $space-md;
+
+    & .weather-detail__temp {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: $space-sm;
+    }
+
+    & .weather-detail__info {
+      font-size: 1rem;
+      color: $color-muted;
+    }
+  }
+}
+

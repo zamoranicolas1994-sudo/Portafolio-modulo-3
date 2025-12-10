@@ -12,13 +12,17 @@
 
 <div class="container weather-detail__container">
   <button class="btn btn-secondary weather-detail__back" onclick="history.back()">← Volver</button>
-  <h1 id="ciudad" class="mb-3">Ciudad</h1>
 
-  <div class="weather-detail__main">
+ <div class="weather-detail__info-box">
+  <h1 id="ciudad" class="weather-detail__city mb-3">Ciudad</h1>
+
+  <div class="weather-detail__main text-center">
     <h3 id="temperatura" class="weather-detail__temp">25°C</h3>
     <p id="humedad" class="weather-detail__info">Humedad: 40%</p>
     <p id="viento" class="weather-detail__info">Viento: 12 km/h</p>
   </div>
+</div>
+
 
   <h4>Pronóstico de la semana</h4>
   <div class="row g-3 weather-detail__week">
@@ -42,7 +46,6 @@
 <script>
 const params = new URLSearchParams(window.location.search);
 const ciudad = params.get('ciudad') || "Ciudad";
-document.getElementById('ciudad').textContent = ciudad;
 
 const ciudades = {
   "Santiago": {temp:"25°C", hum:"40%", viento:"12 km/h"},
@@ -57,12 +60,29 @@ const ciudades = {
   "Copiapo": {temp:"30°C", hum:"25%", viento:"12 km/h"}
 };
 
+// Mapa para mostrar nombres con tilde y espacios correctos
+const nombresDisplay = {
+  "Santiago": "Santiago",
+  "Valparaiso": "Valparaíso",
+  "Concepcion": "Concepción",
+  "LaSerena": "La Serena",
+  "PuertoMontt": "Puerto Montt",
+  "Antofagasta": "Antofagasta",
+  "Rancagua": "Rancagua",
+  "VinaDelMar": "Viña del Mar",
+  "Temuco": "Temuco",
+  "Copiapo": "Copiapó"
+};
+
+// Actualizar la información en la página
 if(ciudades[ciudad]){
+  document.getElementById('ciudad').textContent = nombresDisplay[ciudad] || ciudad;
   document.getElementById('temperatura').textContent = ciudades[ciudad].temp;
-  document.getElementById('humedad').textContent = "Humedad: "+ciudades[ciudad].hum;
-  document.getElementById('viento').textContent = "Viento: "+ciudades[ciudad].viento;
+  document.getElementById('humedad').textContent = "Humedad: " + ciudades[ciudad].hum;
+  document.getElementById('viento').textContent = "Viento: " + ciudades[ciudad].viento;
 }
 </script>
+
 
 </body>
 </html>

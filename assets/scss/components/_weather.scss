@@ -13,6 +13,19 @@
 }
 
 .weather {
+
+    // fondo transparente
+    .weather {
+  &__item,
+  &-detail__info-box,
+  &-detail__day {
+    background-color: rgba(255, 255, 255, 0.85); // blanco con 85% de opacidad
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: $space-md;
+  }
+}
+
   &__row {
     margin-top: $space-lg;
   }
@@ -41,3 +54,4 @@
     }
   }
 }
+
