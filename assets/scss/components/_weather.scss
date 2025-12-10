@@ -1,0 +1,43 @@
+// Mixin para tarjetas meteorológicas
+@mixin weather-card {
+  background: $color-card;
+  border-radius: $radius;
+  padding: $space-md;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.weather {
+  &__row {
+    margin-top: $space-lg;
+  }
+
+  &__item {
+    @include weather-card;
+    text-align: center;
+
+    & .weather__icon {
+      margin-bottom: $space-sm;
+    }
+
+    & .weather__city {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    & .weather__temp {
+      font-size: 2rem;
+      margin: $space-sm 0;
+    }
+
+    & .weather__info {
+      font-size: 0.9rem;
+      color: $color-muted;
+    }
+  }
+}

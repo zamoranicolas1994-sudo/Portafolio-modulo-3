@@ -1,0 +1,94 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+body {
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.weather__row {
+  margin-top: 2rem;
+}
+.weather__item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+.weather__item:hover {
+  transform: scale(1.03);
+}
+.weather__item .weather__icon {
+  margin-bottom: 0.5rem;
+}
+.weather__item .weather__city {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.weather__item .weather__temp {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.weather__item .weather__info {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.weather-detail__container {
+  margin-top: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.weather-detail__back {
+  margin-bottom: 1rem;
+}
+.weather-detail__main {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.weather-detail__main .weather-detail__temp {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.weather-detail__main .weather-detail__info {
+  font-size: 1rem;
+  color: #6c757d;
+}
+.weather-detail__week {
+  margin-top: 1rem;
+}
+.weather-detail__day {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.weather-detail__day h6 {
+  margin-bottom: 0.5rem;
+}
+.weather-detail__day p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */

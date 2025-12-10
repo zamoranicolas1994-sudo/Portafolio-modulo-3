@@ -1,0 +1,51 @@
+.weather-detail {
+  
+  &__container {
+    margin-top: $space-lg;
+    background: $color-card;
+    border-radius: $radius;
+    padding: $space-lg;
+    box-shadow: $shadow;
+  }
+
+  &__back {
+    margin-bottom: $space-md;
+  }
+
+  &__main {
+    text-align: left;
+    margin-bottom: $space-lg;
+
+    & .weather-detail__temp {
+      font-size: 2.2rem;
+      font-weight: bold;
+    }
+
+    & .weather-detail__info {
+      font-size: 1rem;
+      color: $color-muted;
+    }
+  }
+
+  &__week {
+    margin-top: $space-md;
+  }
+
+  &__day {
+    background: $color-card;
+    padding: $space-md;
+    border-radius: $radius;
+    text-align: center;
+    box-shadow: $shadow;
+
+    h6 {
+      margin-bottom: $space-sm;
+    }
+
+    p {
+      margin-top: $space-sm;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+}
