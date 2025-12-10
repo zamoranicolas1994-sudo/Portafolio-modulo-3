@@ -1,0 +1,135 @@
+/* ============================= */
+/*       ESTILOS PARA INDEX       */
+/* ============================= */
+
+/* Imagen para Backgroudn de index y detalle */
+
+body {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Bloque principal de cards de clima */
+.weather__item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+.weather__item:hover {
+  transform: translateY(-6px);
+}
+
+/* Info adicional (tooltip) */
+.weather__info {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(255,255,255,0.95);
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  text-align: center;
+  width: 180px;
+  z-index: 10;
+}
+.weather__item:hover .weather__info {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.weather__info::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.95) transparent transparent transparent;
+}
+
+/* Responsive mobile */
+@media (max-width: 575.98px){
+  .weather__info {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    pointer-events: auto;
+  }
+}
+
+/* ============================= */
+/*       ESTILOS PARA DETALLE     */
+/* ============================= */
+
+
+/* Contenedor principal */
+.weather-detail__container {
+  padding: 1rem 0;
+}
+
+/* Botón volver */
+.weather-detail__back {
+  margin-bottom: 1rem;
+}
+
+/* Información principal de la ciudad */
+.weather-detail__main {
+  /* Fondo blanco */
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.weather-detail__temp {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-detail__info {
+  margin: 0.25rem 0;
+}
+
+/* Pronóstico semanal */
+.weather-detail__week {
+  margin-top: 2rem;
+}
+
+.weather-detail__day {
+/* Fondo blanco */
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 6px;
+}
+
+.weather-detail__day h6 {
+  margin-bottom: 0.5rem;
+}
+
+.weather-detail__day p {
+  margin-bottom: 0;
+}
+
+/* ============================= */
+/*       ESTILOS GENERALES        */
+/* ============================= */
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 30px;
+}
